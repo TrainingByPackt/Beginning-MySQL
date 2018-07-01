@@ -1,11 +1,6 @@
--- Step (1)
+USE packt_school;
 
-SELECT student_id as id
-FROM exam_score
-WHERE score >= 60;
+-- Step (2)
 
--- Step (3)
-
-SELECT id ,name 
-FROM student 
-WHERE id IN (4, 5, 6, 7);
+SELECT id, name, email, CONCAT("'", name, "'<", email, ">") as email_formatted
+FROM student;

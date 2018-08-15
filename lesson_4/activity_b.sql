@@ -6,7 +6,7 @@ SELECT s.name, es.score
 FROM student s
 INNER JOIN exam_score es ON s.id = es.student_id
 WHERE es.score < (
-	SELECT es.score
+  SELECT es.score
   FROM exam_score es
   INNER JOIN student s ON es.student_id = s.id
   WHERE s.name = 'Brian Baraka'
